@@ -112,6 +112,17 @@ img {
   text-align: center;
 }
 
+.cart-total-btn{
+  background: rgb(181, 89, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(181, 89, 255, 0.6579424005930496) 20%,
+    rgba(90, 0, 255, 1) 100%
+  );
+  border-radius: 0 0 0.5rem 0.5rem;
+  color:#fff;
+}
+
 /* ========================= */
 /* Utility Classes */
 /* ========================= */
