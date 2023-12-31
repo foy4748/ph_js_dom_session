@@ -101,6 +101,7 @@ img {
 .cart-item{
   border: 1px solid #8888;
   border-radius: 0.5rem;
+  margin-bottom: 10px;
 }
 
 .cart-img{

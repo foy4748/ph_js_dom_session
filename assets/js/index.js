@@ -5,9 +5,10 @@
 // U - Update || Data that can be read
 // D - Delete || Delete data that can be read
 
-const globalState = {};
+const globalState = { totalPrice: 0 };
 /*
   {
+    "totalPrice": 0,
     "product Name 1": {
       price: Number,
       quantity: Number
@@ -22,6 +23,7 @@ const globalState = {};
 
 // Grabbing Elements
 const cards = document.querySelectorAll(".card");
+const rightSide = document.querySelector(".page-right");
 
 //console.log(cards[0].childNodes[3].childNodes[5].childNodes[1]);
 
@@ -48,15 +50,35 @@ cards.forEach((singleCard, idx) => {
     // Updating Global State
     if(productName in globalState){
       globalState[productName]['quantity']++;
+      globalState['totalPrice'] += Number(price);
     } else{
       globalState[productName] = {};
-      globalState[productName]['price'] = price;
+      globalState[productName]['price'] = Number(price);
       globalState[productName]['quantity'] = 1;
+      globalState[productName]['img'] = productImg
+      globalState['totalPrice'] += Number(price);
     }
     console.log(globalState)
+    renderStateOnPage(globalState);
   })
 
 })
+
+
+function renderStateOnPage(currentState){
+  rightSide.innerHTML = "";
+  rightSide.innerHTML += `<strong> Grand Total : ${currentState['totalPrice'].toFixed(2)} BDT (only)</strong>`
+  for(const productName in currentState){
+    if(productName != 'totalPrice'){
+      const img_url = currentState[productName].img;
+      const product_price = currentState[productName].price;
+      const product_quantity = currentState[productName].quantity;
+      
+      const cartItem = createCartItem(img_url, productName, product_price, product_quantity)
+      rightSide.innerHTML += cartItem;
+    }
+  }
+}
 
 function createCartItem(img_url, product_title, product_price, product_quantity) {
   const singleCartItemTemplate = `
