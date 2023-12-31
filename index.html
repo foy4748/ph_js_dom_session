@@ -4,19 +4,14 @@
     <meta charset="UTF-8" />
     <title>Learn DOM operations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="./assets/css/index.css"
-      type="text/css"
-      media="all"
-    />
+    <link rel="stylesheet" href="/assets/css/index.css" type="text/css" />
   </head>
   <body>
-    <header>
+    <header class="text-right">
       <h1>Shopping Cart</h1>
     </header>
     <main>
-      <section class="grid">
+      <section class="grid layout-grid">
         <!-- Left Side of The page -->
         <aside class="page-left">
           <section class="grid card-grid">
@@ -137,12 +132,36 @@
           </section>
         </aside>
         <!-- Right Side of The page -->
-        <aside class="page-right"></aside>
+        <aside class="page-right">
+          <section class="cart-item">
+            <section class="flex flex-between pe-1">
+              <figure class="cart-figure">
+                <img class="cart-img" src="https://m.media-amazon.com/images/I/71ctRE34RuL._AC_UY218_.jpg" alt="Laptop 1">
+                <article>
+                  <h3 class="pb-0 mb-0">Laptop 1</h3>
+                </article>
+              </figure>
+              <article class="flex w-50 flex-between">
+                <div>
+                  <p>Unit Price</p>
+                  <p>100.00</p>
+                </div>
+                <div>
+                  <p>Quantity</p>
+                  <p>100.00</p>
+                </div>
+              </article>
+            </section>
+            <article class="text-center">
+              <p class="p-0 m-0">Total: 10000.00 BDT</p>
+            </article>
+          </section>
+        </aside>
       </section>
     </main>
     <footer class="text-center">
       <small>Learn DOM manipulation</small>
     </footer>
-    <script src="./assets/js/index.js"></script>
+    <script src="/assets/js/index.js"></script>
   </body>
 </html>
