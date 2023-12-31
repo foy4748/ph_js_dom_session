@@ -1,3 +1,34 @@
+// Always remember
+
+// C - Create || If data doesn't exist
+// R - Read   || Existing Data
+// U - Update || Data that can be read
+// D - Delete || Delete data that can be read
+
+// Grabbing Elements
+const cards = document.querySelectorAll(".card");
+
+//console.log(cards[0].childNodes[3].childNodes[5].childNodes[1]);
+
+cards.forEach((singleCard, idx) => {
+  //console.log(singleCard.childNodes[3].childNodes[5].childNodes[1]);
+  //console.log(singleCard.childNodes[3].childNodes[3].textContent.split(' ')[1])
+  //console.log(singleCard.childNodes[3].childNodes[3].textContent.split(' ')[1])
+  //console.log(article.childNodes[1].innerText);
+
+  const article = singleCard.childNodes[3];
+  const addToCartButton = article.childNodes[5].childNodes[1];
+  const price = article.childNodes[3].textContent.split(' ')[1]
+  const productName = article.childNodes[1].innerText
+  
+  //const price = addToCartButton.dataset.price;
+
+  addToCartButton.addEventListener('click', () => {
+    console.log(`Clicked ${idx} || Price ${price} || Product Name: ${productName}`)
+  })
+
+})
+
 /*
 const images = [
   {
