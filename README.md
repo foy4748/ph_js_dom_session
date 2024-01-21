@@ -1,3 +1,31 @@
+# Concepts of JavaScript Required for DOM
+
+- Basic Stuffs
+    - Variables / Data Types
+        - Understand Block Scope
+        - Understand Lexical Scope
+    - Loop
+    - Function
+    - Conditions
+    - Ternary Operators
+    - Logical Operators
+
+- Array / Array Methods
+    - .forEach()
+    - .map()
+    - .filter()
+    - .find()
+    - .push() / .pop()
+    - .join()
+
+- Object
+    - Traversing Object
+    - Accessing/Updating Key/Values
+    - Key uniqueness
+    - Creating a histogram
+
+- Array of Objects
+
 # Concept of DOM
 
 DOM stands for **Document Object Model**    
@@ -77,3 +105,24 @@ Then The possible simplified Object representation of the Docuemnt is
     }
 }
 ```
+# DOM Operations
+
+## References
+- (Plain JavaScript)[https://plainjs.com/javascript/]
+- (HTMLCollection Vs NodeList)[https://dev.to/jharteaga/difference-between-htmlcollection-and-nodelist-25bp]
+
+- Selecting DOM Elements
+    - querySelector() , querySelectorAll()
+    - getElementById()
+    - getElementsByClassName()
+    - getElementsByTagName()
+
+- Traversing Through DOM elements
+    - Accessing Parent element
+    - Accessing Child element
+    - Accessing Sibling element
+
+- Manipulating DOM elements
+    - Create
+    - Delete
+    - Update
