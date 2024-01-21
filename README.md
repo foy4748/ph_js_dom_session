@@ -5,6 +5,7 @@
         - Understand Block Scope
         - Understand Lexical Scope
     - Loop
+    - Template Literal / String Methods
     - Function
     - Conditions
     - Ternary Operators
